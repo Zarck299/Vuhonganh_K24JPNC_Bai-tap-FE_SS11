@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: white;
+  width: 480px;
+  height: 568px;
+  position: relative;
+  border: 3px solid #444950;
+}
+
+.mark {
+  background-color: #2d2934;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.header {
+  background-color: #a60162;
+  width: 440px;
+  height: 150px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.main1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 10px;
+}
+
+.main1 .box {
+  background-color: #db317f;
+  height: 75px;
+}
+
+.main2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 10px;
+}
+
+.main2 .row {
+  background-color: #de5d9e;
+  height: 100px;
+}
+
+.footer {
+  background-color: #ed7bb8;
+  height: 140px;
+  margin: 20px 10px;
+}
+@media (max-width: 1200px) {
+  .header {
+      height: 110px;
+  }
+  .main1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 75px;
+  }
+
+  .main1 .box {
+      background-color: #db317f;
+      width: calc((100% - 30px) / 4);
+      height: 95px;
+  }
+
+  .main2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .footer {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      height: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    flex-wrap: wrap;
+    width: 288px;
+  }
+  .header {
+      width: 262px;
+      height: 110px;
+  }
+  .main1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 75px;
+  }
+  .main1 .box {
+      flex-wrap: wrap;
+      background-color: #db317f;
+      width: calc((100% - 30px) / 4);
+      height: 95px;
+      flex-grow: 1;
+  }
+
+  .main2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 0;
+  }
+
+  .footer {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 144px;
+  }
+  .header {
+    width: 116px;
+  }
+  .main1, .main2, .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .main1 .box, .main2 .row {
+      width: 100%;
+      height: auto;
+  }
+
+  .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+}
